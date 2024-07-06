@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  jupyter:
+    build: .
+    container_name: datascience-notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - /Users/carlos/UniPalermo/data-science:/home/jovyan
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    tty: true
